@@ -6,6 +6,10 @@
 	--gold: #EFC58B;
 }
 
+:focus {
+	outline: none;
+}
+
 *,
 *::before,
 *::after {
@@ -54,7 +58,7 @@ body {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 23px;
-	letter-spacing: 0.06em;
+	/* letter-spacing: 0.06em; */
 	background-color: var(--white);
 		/* background-color: #000; */
 
@@ -75,6 +79,11 @@ button {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+}
+
+.header {
+	height: 1061px;
+	margin-bottom: 20px;
 }
 
 .container {
@@ -430,7 +439,8 @@ button {
 }
 
 .form__input {
-	width: 280px;
+	/* width: 280px; */
+	width: 100%;
 	padding-bottom: 10px;
 	background-color: transparent;
 	border: none;
@@ -449,6 +459,7 @@ button {
 	background-image: url(../images/arrow-right.svg);
 }
 
+.form__input,
 .form__input::placeholder {
 	font-family: 'Futura PT Light';
 	font-weight: 300;
@@ -457,16 +468,190 @@ button {
 	color: #C2C2C2;
 }
 
-.grid-container {
-	display: grid;
-	grid-template-rows:  2fr 2fr;
-	grid-template-columns:  2fr 2fr;
+.form__input:focus {
+	outline: none;
 }
 
-.main__grid-item {
-	width: 710px;
-height: 587px;
+.main {
+	margin-bottom: 20px;
+}
 
+.main__grid-container {
+	max-width: 1440px; /*!*/
+	display: grid;
+	/* grid-template-rows: [col-1] 1fr [col-2] 1fr [col-end]; */
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns:  1fr 1fr;
+	grid-gap: 20px;
+	margin: 0 auto; /*!*/
+}
 
-background: rgba(39, 39, 39, 0.4);
+.grid-item {
+	/* width: 710px; */
+	height: 587px;
+	/* background: rgba(39, 39, 39, 0.4); */
+	background-color: var(--gray);
+}
+
+.grid-item__banner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.grid-item__banner::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom, rgba(39, 39, 39, 0.5), transparent);
+}
+
+.grid-item.--one {
+	background-image: url(../images/main-img-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.grid-item.--two {
+	background-image: url(../images/main-img-2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.grid-banner__text {
+	font-family: 'Futura PT Light';
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 31px;
+}
+
+.grid-banner__title {
+	font-family: 'Forum', cursive;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 71px;
+	letter-spacing: 0.03em;
+	position: relative;
+}
+
+.grid-banner__title a {
+	transition: all 0.3s ease-out;
+}
+
+.grid-banner__title::after {
+	content: '';
+	width: 130px;
+	height: 1px;
+	position: absolute;
+	bottom: -30px;
+	right: 31%;
+	background-color: var(--white);
+}
+
+.grid-banner__title a:hover,
+.grid-banner__title a:focus {
+	color: var(--gold);
+}
+
+.grid-item__contacts {
+	height: 100%;
+	display: flex;
+}
+
+.grid-item__form {
+	flex: 0 0 710px;
+	align-self: center;
+}
+
+.grid-contacts__form {
+	width: 386px;
+	margin: 0 auto;
+}
+
+.grid-contacts__title {
+	font-family: 'Forum', cursive;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 53px;
+	letter-spacing: 0.03em;
+}
+
+.grid-contacts__text {
+	font-family: 'Futura PT Light';
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 23px;
+	margin-top: 16px;
+	margin-bottom: 60px;
+}
+
+.--three {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+.grid-item__map {
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/map.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+}
+
+.map-target__name {
+	font-family: 'Futura PT Light';
+	font-weight: 300;
+	width: 134px;
+	height: 43px;
+	display: inline-block;
+	margin-top: 115px;
+	padding: 10px;
+	background: rgba(103, 103, 103, 0.58);
+	border-radius: 2px;
+}
+
+.map-target__loc {
+	position: absolute;
+}
+
+.map-target__loc.--cursor {
+	top: 220px;
+	left: 285px;
+}
+
+.map-target__loc.--target {
+	top: 165px;
+	left: 260px;
+}
+
+.map-target__loc.--one {
+	top: 140px;
+	left: 90px;
+}
+
+.map-target__loc.--two {
+	top: 225px;
+	left: 375px;
+}
+
+.map-target__loc.--three {
+	bottom: 177px;
+	left: 480px;
+}
+
+.map-target__loc.--four {
+	bottom: 125px;
+	left: 270px;
 }
