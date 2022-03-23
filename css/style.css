@@ -431,6 +431,16 @@ button {
 
 .social {
 	margin-right: 20px;
+	transition: all 0.3s ease-out;
+}
+
+.social:hover svg path {
+	fill: var(--gold);
+}
+
+.social svg path {
+	transition: all 0.3s ease-out;
+
 }
 
 .contacts__form form {
@@ -654,4 +664,178 @@ button {
 .map-target__loc.--four {
 	bottom: 125px;
 	left: 270px;
+}
+
+.products {
+	margin-bottom: 20px;
+}
+
+.products__grid-container {
+	width: 1440px;
+	height: 820px;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+
+.prod__grid-item {
+	width: 400px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-color: #EDEDED;
+}
+
+.prod__grid-item.--central {
+	width: 600px;
+	height: 820px;
+	grid-row-start: 1;
+	grid-row-end: -1;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	background-image: url(../images/prod-img-2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.prod-item__img {
+	max-width: 260px;
+	height: auto;
+	align-self: center;
+}
+
+.prod__grid-item:nth-child(1) .prod-item__info,
+.prod__grid-item:nth-child(4) .prod-item__info {
+	margin-top: 67px;
+}
+
+.prod-item__info {
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+.prod-item__title {
+	font-family: 'Futura PT Light';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.prod-item__text {
+	font-family: 'Futura PT Light';
+	font-weight: 300;
+	color: #757575;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.prod-item__price {
+	font-family: 'Segoe UI';
+	font-style: italic;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: #EFC58B;
+}
+
+.--central .prod-item__title {
+	color: var(--white);
+}
+
+.--central .prod-item__text {
+	color: #E7E7E7;
+}
+
+.--central .prod-item__price {
+	color: var(--gold);
+}
+
+.slider {
+	width: 1440px;
+	height: 886px;
+	background-color: var(--black);
+}
+
+.contacts__container {
+	display: flex;
+}
+
+.content__contacts {
+	flex: 0 0 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content__contacts .contacts__title {
+	margin-bottom: 30px;
+	font-size: 18px;
+	line-height: 23px;
+	color: var(--black);
+}
+
+.content__contacts :is(.contacts__tel, input) {
+	color: #959595;
+}
+
+.content__contacts .form__input::placeholder {
+	color: #959595;
+}
+
+.content__contacts input {
+	width: 280px;
+	font-size: 22px;
+	line-height: 28px;
+	border-bottom: 2px solid var(--black);
+}
+
+.content__contacts .contacts__content {
+	margin-bottom: 110px;
+}
+
+.footer {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	background-color: var(--black);
+}
+
+.footer__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 90px;
+}
+
+.footer__nav-item {
+	font-family: 'Futura PT';
+	font-weight: 450;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+.footer__contacts {
+	display: flex;
+}
+
+.footer__contacts .contacts__content {
+	margin-left: 314px;
+	margin-right: 80px;
+}
+
+.footer__contacts .contacts__title {
+	white-space: nowrap;
+}
+
+.footer__contacts input {
+	width: 280px;
 }
