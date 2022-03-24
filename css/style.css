@@ -119,6 +119,18 @@ button {
 	width: 36px;
 }
 
+.list__item-link svg path{
+	transition: all 0.5s ease 0s;
+}
+
+.list__item-link:hover path {
+	stroke: var(--gold);
+}
+
+.list__item-link.--heart:hover path {
+	stroke: red;
+}
+
 .nav__btn {
 	width: 30px;
 	height: 16px;
@@ -431,7 +443,6 @@ button {
 
 .social {
 	margin-right: 20px;
-	transition: all 0.3s ease-out;
 }
 
 .social:hover svg path {
@@ -439,7 +450,7 @@ button {
 }
 
 .social svg path {
-	transition: all 0.3s ease-out;
+	transition: all 0.5s ease-out;
 
 }
 
@@ -489,7 +500,6 @@ button {
 .main__grid-container {
 	max-width: 1440px; /*!*/
 	display: grid;
-	/* grid-template-rows: [col-1] 1fr [col-2] 1fr [col-end]; */
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns:  1fr 1fr;
 	grid-gap: 20px;
@@ -758,8 +768,83 @@ button {
 
 .slider {
 	width: 1440px;
-	height: 886px;
+	/* height: 886px; */
+	padding: 100px 0;
 	background-color: var(--black);
+}
+
+.design-slider {
+	margin: 80px 0;
+}
+
+.slider__item-img {
+	max-width: 385px;
+	height: 385px;
+	margin: 0 12.5px;
+}
+
+/* .slider__item-img.--one,
+.slider__item-img.--three,
+.slider__item-img.--five {
+	width: 308px !important;
+} */
+
+/* .slick-track {
+	margin-left: 160px;
+} */
+
+.slider-nav {
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+.slick-nav {
+	position: relative;
+}
+
+.arrow {
+	position: absolute;
+	top: -12px;
+	right: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.arrow-left {
+	transform: translateX(-284px);
+}
+
+.slick-dots {
+	display: flex;
+	/* justify-content: space-between; */
+	gap: 17px;
+	margin-right: 110px;
+	list-style: none;
+	/* position: absolute; */
+}
+
+.slick-dots li {
+	width: 8px;
+	height: 8px;
+}
+
+.slick-dots button {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	padding: 0;
+	background-color: #656565;
+	color: transparent;
+	font-size: 24px;
+	line-height: 28px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.slick-active button {
+	background-color: var(--white);
+	border: 2px solid var(--white);
 }
 
 .contacts__container {
