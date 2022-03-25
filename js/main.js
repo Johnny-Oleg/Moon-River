@@ -39,17 +39,24 @@ $(function() {
         //     },
         // ],
     });
-})
-// $(function() {
 
-// 	$('.design-slider').slick({
-// 		infinite: true,
-// 		slidesToShow: 5,
-// 		slidesToScroll: 5,
-// 		dots: true,
-// 		prevArrow:
-//       '<img class="arrow arrow-left" src="images/arrow-left.svg" alt="arrow">',
-// 		nextArrow:
-// 	 '<img class="arrow arrow-right" src="images/arrow-right.svg" alt="arrow">',
-// 	});
-// })
+    $('.nav__btn').on('click', function () {
+        $('.nav__btn').toggleClass('active');
+        // $('.header__logo').toggleClass('--active');
+        // $('.header__inner-left').toggleClass('--active');
+        // $('.inner-right__content').toggleClass('--active');
+        // $('.header__inner-right').toggleClass('--active');
+        // $('.header__nav').toggleClass('--active');
+        // $('.header__nav-list').toggleClass('--active');
+        $([
+            '.header__logo', 
+            '.header__inner-left', 
+            '.inner-right__content',
+            '.header__inner-right',
+            '.header__nav',
+            '.header__nav-list'    
+        ].join(',')).each(function() {
+            $(this).toggleClass('--active');
+        })
+    });
+})

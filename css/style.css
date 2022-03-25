@@ -101,6 +101,10 @@ button {
 	z-index: 2022;
 }
 
+.header__logo path {
+	transition: all 0.5s ease-out;
+}
+
 .header__icons {
 	margin-left: 595px;
 	margin-right: 80px;
@@ -192,11 +196,8 @@ button {
 	margin-top: 325px;
 	/* gap: 94px; */
 	background-color: transparent;
+	transition-delay: 0.8s;
 }
-
-/* .header__inner-left span {
-	
-} */
 
 .inner-left__decor {
 	width: 130px;
@@ -239,6 +240,7 @@ button {
 	bottom: 0;
 	background-color: var(--black);
 	padding-top: 170px;
+	transition: all 0.5s ease-out;
 }
 
 .inner-left__img {
@@ -264,32 +266,45 @@ button {
 	/* color: #C4C4C4; */
 }
 
-.nav__btn:hover .header__inner-right {
-	width: 100%;
-}
-
-.nav__btn:hover .header__nav {
-	visibility: visible;
-}
-
-.nav__btn:hover .inner-right__content {
-	visibility: visible;
-}
-
 .header__nav {
 	max-width: 1440px;
 	/* height: 75px; */
 	margin-bottom: 400px;
 	background-color: #2F2F2F;
-	visibility: hidden; /*!*/
+	visibility: hidden;
+	transition: all 0.5s ease-out;
 }
 
 .header__nav-list {
 	height: 75px;
-	display: flex;
-	/* justify-content: space-between; */
-	/* align-items: center; */
+	display: none;
 	gap: 50px;
+	transition: all 0.5s ease-out;
+}
+
+.header__logo.--active path:first-child {
+	fill: var(--white);
+} 
+
+.header__inner-left.--active {
+	visibility: hidden; 
+	transition-delay: 0s;
+}
+
+.inner-right__content.--active {
+	visibility: visible;
+}
+
+.header__inner-right.--active {
+	width: 100%;
+}
+
+.header__nav.--active {
+	visibility: visible;
+}
+
+.header__nav-list.--active {
+	display: flex;
 }
 
 .nav-list__item {
@@ -298,7 +313,6 @@ button {
 	align-items: center;
 	cursor: pointer;
 	position: relative;
-	/* transition: all 3s ease-out; */
 }
 
 .nav-list__item:hover {
@@ -363,17 +377,15 @@ button {
 	justify-content: space-between;
 	padding-top: 70px;
 	border-top: 2px solid var(--gray);
-	visibility: hidden; /*!*/
+	visibility: hidden;
 }
 
 .content__banner {
 	width: 749px;
 	height: 268px;
-	/* background-color: rgba(39, 39, 39, 0.5); */
 	background-image: url(../images/header-banner.jpg);
 	border-radius: 2px;
 	position: relative;
-	/* text-align: center; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -386,7 +398,6 @@ button {
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* background-color: rgba(39, 39, 39, 0.5); */
 	background: linear-gradient(to bottom, rgba(39, 39, 39, 0.5), transparent);
 	border-radius: 2px;
 }
@@ -447,10 +458,7 @@ button {
 
 .social:hover svg path {
 	fill: var(--gold);
-}
-
-.social svg path {
-	transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out 0s;
 }
 
 form {
@@ -777,7 +785,6 @@ form::after {
 
 .slider {
 	width: 1440px;
-	/* height: 886px; */
 	padding: 100px 0;
 	background-color: var(--black);
 }
@@ -791,16 +798,6 @@ form::after {
 	height: 385px;
 	margin: 0 12.5px;
 }
-
-/* .slider__item-img.--one,
-.slider__item-img.--three,
-.slider__item-img.--five {
-	width: 308px !important;
-} */
-
-/* .slick-track {
-	margin-left: 160px;
-} */
 
 .slider-nav {
 	display: flex;
@@ -826,11 +823,9 @@ form::after {
 
 .slick-dots {
 	display: flex;
-	/* justify-content: space-between; */
 	gap: 17px;
 	margin-right: 110px;
 	list-style: none;
-	/* position: absolute; */
 }
 
 .slick-dots li {
@@ -860,7 +855,7 @@ form::after {
 	display: flex;
 }
 
-.content__contacts {
+.contacts__inner {
 	flex: 0 0 50%;
 	display: flex;
 	flex-direction: column;
@@ -868,29 +863,29 @@ form::after {
 	align-items: center;
 }
 
-.content__contacts .contacts__title {
+.contacts__inner .contacts__title {
 	margin-bottom: 30px;
 	font-size: 18px;
 	line-height: 23px;
 	color: var(--black);
 }
 
-.content__contacts :is(.contacts__tel, input) {
+.contacts__inner :is(.contacts__tel, input) {
 	color: #959595;
 }
 
-.content__contacts .form__input::placeholder {
+.contacts__inner .form__input::placeholder {
 	color: #959595;
 }
 
-.content__contacts input {
+.contacts__inner input {
 	width: 280px;
 	font-size: 22px;
 	line-height: 28px;
 	border-bottom: 2px solid var(--black);
 }
 
-.content__contacts .contacts__content {
+.contacts__inner .contacts__content {
 	margin-bottom: 110px;
 }
 
