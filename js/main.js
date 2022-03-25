@@ -15,39 +15,32 @@ $(function() {
             '<img class="arrow arrow-left" src="images/slider-arrow-left.svg" alt="arrow">',
         nextArrow:
             '<img class="arrow arrow-right" src="images/slider-arrow-right.svg" alt="arrow">',
-        // responsive: [
-        //     {
-        //         breakpoint: 361,
-        //         settings: {
-        //             variableWidth: false,
-        //             slidesToShow: 1,
-        //         },
-        //         breakpoint: 891,
-        //         settings: {
-        //             vertical: false,
-        //             slidesToShow: 3,
-        //             arrows: false,
-        //             dots: true,
-        //         },
-        //         breakpoint: 461,
-        //         settings: {
-        //             vertical: false,
-        //             slidesToShow: 1,
-        //             arrows: false,
-        //             dots: true,
-        //         },
-        //     },
-        // ],
+        responsive: [
+            {
+                breakpoint: 891,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false,
+                    dots: true,
+                },
+                breakpoint: 461,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true,
+                },
+                breakpoint: 361,
+                settings: {
+                    variableWidth: false,
+                    slidesToShow: 1,
+                },
+            },
+        ],
     });
 
     $('.nav__btn').on('click', function () {
         $('.nav__btn').toggleClass('active');
-        // $('.header__logo').toggleClass('--active');
-        // $('.header__inner-left').toggleClass('--active');
-        // $('.inner-right__content').toggleClass('--active');
-        // $('.header__inner-right').toggleClass('--active');
-        // $('.header__nav').toggleClass('--active');
-        // $('.header__nav-list').toggleClass('--active');
+
         $([
             '.header__logo', 
             '.header__inner-left', 

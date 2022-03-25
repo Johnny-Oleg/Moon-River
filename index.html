@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+		<div class="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header__top">
@@ -66,7 +67,7 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="nav__btn" aria-pressed="false">
+                    <button class="nav__btn">
                         <span></span>
                     </button>
                 </div>
@@ -248,9 +249,9 @@
 										Новая коллекция by Mercury
 									</p>
 									<h2 class="banner__title">JUSTE UN CLOU</h2>
-									<p class="banner__text">
+									<a class="banner__text" href="#">
 										Cмотреть коллекцию
-									</p>
+									</a>
 								</div>
 								<div class="content__contacts">
 									<div class="contacts__content">
@@ -283,6 +284,9 @@
 												type="email" 
 												placeholder="Введите E-mail"
 											>
+											<button class="form__btn" type="submit">
+												<img class="form__btn-img" src="images/arrow-right.svg" alt="arrow">
+											</button>
 										</form>
 										<img class="apps" src="images/apple-store.png" alt="app store">
 										<img class="apps" src="images/google-play.png" alt="google play">
@@ -298,7 +302,6 @@
 		<section class="main">
 			<div class="main__grid-container">
 				<div class="grid-item --one">
-					<!-- <div class="container"></div> -->
 					<div class="grid-item__banner">
 						<p class="grid-banner__text">
 							Перейти в раздел
@@ -310,7 +313,6 @@
 					</div>
 				</div>
 				<div class="grid-item --two">
-					<!-- <div class="container"></div> -->
 					<div class="grid-item__banner">
 						<p class="grid-banner__text">
 							Перейти в раздел
@@ -337,6 +339,9 @@
 										type="email" 
 										placeholder="Введите E-mail"
 									>
+									<button class="form__btn" type="submit">
+										<img class="form__btn-img" src="images/arrow-right.svg" alt="arrow">
+									</button>
 								</form>
 							</div>
 						</div>
@@ -465,6 +470,9 @@
 									type="email" 
 									placeholder="Введите E-mail"
 								>
+								<button class="form__btn" type="submit">
+									<img class="form__btn-img" src="images/black-arrow.svg" alt="arrow">
+								</button>
 							</form>
 						</div>
 					</div>
@@ -550,6 +558,9 @@
 								type="email" 
 								placeholder="Введите E-mail"
 							>
+							<button class="form__btn" type="submit">
+								<img class="form__btn-img" src="images/arrow-right.svg" alt="arrow">
+							</button>
 						</form>
 						<img class="apps" src="images/apple-store.png" alt="app store">
 						<img class="apps" src="images/google-play.png" alt="google play">
@@ -557,6 +568,7 @@
 				</div>
 			</div>
 		</footer>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="js/slick.min.js"></script>
